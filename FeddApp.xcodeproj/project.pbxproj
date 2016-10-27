@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0336F6F50BE512F9AC1FA2BE /* Pods_FeddApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352D31E3D12CDEA4B354426D /* Pods_FeddApp.framework */; };
 		991997131DC1786000D3EA8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991997121DC1786000D3EA8A /* AppDelegate.swift */; };
 		991997151DC1786000D3EA8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991997141DC1786000D3EA8A /* ViewController.swift */; };
 		991997181DC1786000D3EA8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 991997161DC1786000D3EA8A /* Main.storyboard */; };
 		9919971B1DC1786000D3EA8A /* FeddApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 991997191DC1786000D3EA8A /* FeddApp.xcdatamodeld */; };
 		9919971D1DC1786000D3EA8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9919971C1DC1786000D3EA8A /* Assets.xcassets */; };
 		991997201DC1786000D3EA8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9919971E1DC1786000D3EA8A /* LaunchScreen.storyboard */; };
+		991997281DC17D9D00D3EA8A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 991997271DC17D9D00D3EA8A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		352D31E3D12CDEA4B354426D /* Pods_FeddApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeddApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83BBB94DBA3A2A2A227F3B49 /* Pods-FeddApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeddApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeddApp/Pods-FeddApp.release.xcconfig"; sourceTree = "<group>"; };
 		9919970F1DC1786000D3EA8A /* FeddApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeddApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		991997121DC1786000D3EA8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		991997141DC1786000D3EA8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		9919971C1DC1786000D3EA8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9919971F1DC1786000D3EA8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		991997211DC1786000D3EA8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		991997271DC17D9D00D3EA8A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AD6CFC6A5C52FD21C28E0521 /* Pods-FeddApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeddApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeddApp/Pods-FeddApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0336F6F50BE512F9AC1FA2BE /* Pods_FeddApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				991997111DC1786000D3EA8A /* FeddApp */,
 				991997101DC1786000D3EA8A /* Products */,
+				A4C0DAC729DD7329FE87CF53 /* Pods */,
+				CF618123BB01FD98BF4BD13F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +72,26 @@
 				9919971E1DC1786000D3EA8A /* LaunchScreen.storyboard */,
 				991997211DC1786000D3EA8A /* Info.plist */,
 				991997191DC1786000D3EA8A /* FeddApp.xcdatamodeld */,
+				991997271DC17D9D00D3EA8A /* GoogleService-Info.plist */,
 			);
 			path = FeddApp;
+			sourceTree = "<group>";
+		};
+		A4C0DAC729DD7329FE87CF53 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD6CFC6A5C52FD21C28E0521 /* Pods-FeddApp.debug.xcconfig */,
+				83BBB94DBA3A2A2A227F3B49 /* Pods-FeddApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF618123BB01FD98BF4BD13F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				352D31E3D12CDEA4B354426D /* Pods_FeddApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 991997241DC1786000D3EA8A /* Build configuration list for PBXNativeTarget "FeddApp" */;
 			buildPhases = (
+				4E4286296737EB244587E03A /* [CP] Check Pods Manifest.lock */,
 				9919970B1DC1786000D3EA8A /* Sources */,
 				9919970C1DC1786000D3EA8A /* Frameworks */,
 				9919970D1DC1786000D3EA8A /* Resources */,
+				229E5B7E9A32A06E8DCD128B /* [CP] Embed Pods Frameworks */,
+				4E94DAF0722254E91D83BD66 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				991997281DC17D9D00D3EA8A /* GoogleService-Info.plist in Resources */,
 				991997201DC1786000D3EA8A /* LaunchScreen.storyboard in Resources */,
 				9919971D1DC1786000D3EA8A /* Assets.xcassets in Resources */,
 				991997181DC1786000D3EA8A /* Main.storyboard in Resources */,
@@ -134,6 +165,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		229E5B7E9A32A06E8DCD128B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FeddApp/Pods-FeddApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E4286296737EB244587E03A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4E94DAF0722254E91D83BD66 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FeddApp/Pods-FeddApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9919970B1DC1786000D3EA8A /* Sources */ = {
@@ -261,12 +340,13 @@
 		};
 		991997251DC1786000D3EA8A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD6CFC6A5C52FD21C28E0521 /* Pods-FeddApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6F75VTXEGM;
 				INFOPLIST_FILE = FeddApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ZiadCorp.FeddApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NCSUAppDev.FeddApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -274,12 +354,13 @@
 		};
 		991997261DC1786000D3EA8A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83BBB94DBA3A2A2A227F3B49 /* Pods-FeddApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6F75VTXEGM;
 				INFOPLIST_FILE = FeddApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ZiadCorp.FeddApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NCSUAppDev.FeddApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -304,6 +385,7 @@
 				991997261DC1786000D3EA8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
