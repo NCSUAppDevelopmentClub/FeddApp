@@ -11,8 +11,21 @@ import Firebase
 
 class ViewController: UIViewController {
 
+    var ref: FIRDatabaseReference = FIRDatabaseReference()
+    
+    @IBOutlet weak var emailField: UITextField!
+    
+    @IBOutlet weak var passwordField: UITextField!
+    
+    @IBAction func login(_ sender: AnyObject) {
+        ref.child("Emails").setValue("yadda yadda")
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = FIRDatabase.database().reference()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -20,13 +33,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
-    @IBOutlet weak var emailField: UITextField!
-
-    @IBOutlet weak var passwordField: UITextField!
     
-    @IBAction func login(_ sender: AnyObject) {
-    }
 }
 
