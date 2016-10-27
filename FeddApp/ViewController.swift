@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
 
@@ -21,5 +22,11 @@ class ViewController: UIViewController {
     }
 
 
+    @IBOutlet weak var emailField: UITextField!
+
+    @IBOutlet weak var passwordField: UITextField!
+    
+    @IBAction func login(_ sender: AnyObject) {
+    }
 }
 
