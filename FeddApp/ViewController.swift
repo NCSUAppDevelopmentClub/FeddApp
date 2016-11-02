@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     
     @IBAction func login(_ sender: AnyObject) {
-        ref.child("Emails").setValue("yadda yadda")
+        ref.child("Emails").setValue("yadda yad")
     }
     
     
