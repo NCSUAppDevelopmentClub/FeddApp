@@ -30,6 +30,7 @@
 		991997211DC1786000D3EA8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		991997271DC17D9D00D3EA8A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AD6CFC6A5C52FD21C28E0521 /* Pods-FeddApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeddApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeddApp/Pods-FeddApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D0E858681DCA9FB20015DA26 /* FeddApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FeddApp-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +74,7 @@
 				991997211DC1786000D3EA8A /* Info.plist */,
 				991997191DC1786000D3EA8A /* FeddApp.xcdatamodeld */,
 				991997271DC17D9D00D3EA8A /* GoogleService-Info.plist */,
+				D0E858681DCA9FB20015DA26 /* FeddApp-Bridging-Header.h */,
 			);
 			path = FeddApp;
 			sourceTree = "<group>";

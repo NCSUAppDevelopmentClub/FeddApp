@@ -7,6 +7,8 @@ target 'FeddApp' do
 
   # Pods for FeddApp
 pod ‘Firebase’
-pod ‘Firebase/Auth’
+pod 'Firebase/Auth'
+pod 'GoogleSignIn'
 pod ‘Firebase/Database’
+
 end
