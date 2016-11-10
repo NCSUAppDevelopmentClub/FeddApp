@@ -12,7 +12,7 @@ import Firebase
 import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,  GIDSignInDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     var window: UIWindow?
 
@@ -110,7 +110,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,  GIDSignInDelegate {
         // ...
     }*/
     
-    public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
             print(error.localizedDescription)
             return
@@ -118,12 +118,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate,  GIDSignInDelegate {
     }
 
     
-    /*optional public func signIn(signIn: GIDSignIn!, didDisconnectWithUser user:GIDGoogleUser!,
+    func signIn(signIn: GIDSignIn!, didDisconnectWithUser user:GIDGoogleUser!,
                 withError error: NSError!) {
         if let error = error {
             print(error.localizedDescription)
             return
         }
-    }*/
+    }
 }
 

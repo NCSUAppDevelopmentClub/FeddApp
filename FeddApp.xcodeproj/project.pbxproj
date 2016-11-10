@@ -131,7 +131,7 @@
 				TargetAttributes = {
 					9919970E1DC1786000D3EA8A = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 6F75VTXEGM;
+						DevelopmentTeam = 3MS4CJ7FH7;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -345,10 +345,10 @@
 			baseConfigurationReference = AD6CFC6A5C52FD21C28E0521 /* Pods-FeddApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6F75VTXEGM;
+				DEVELOPMENT_TEAM = 3MS4CJ7FH7;
 				INFOPLIST_FILE = FeddApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.NCSUAppDev.FeddApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NCSUAppDev.FeddApp2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -359,10 +359,10 @@
 			baseConfigurationReference = 83BBB94DBA3A2A2A227F3B49 /* Pods-FeddApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6F75VTXEGM;
+				DEVELOPMENT_TEAM = 3MS4CJ7FH7;
 				INFOPLIST_FILE = FeddApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.NCSUAppDev.FeddApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NCSUAppDev.FeddApp2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
