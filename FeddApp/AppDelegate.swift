@@ -103,21 +103,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate,  GIDSignInDelegate {
                                                  annotation: options[UIApplicationOpenURLOptionsKey.annotation])
     }
     
-    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
+    /*func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
                 withError error: NSError!) {
         if let error = error {
             print(error.localizedDescription)
             return
         }
         // ...
-    }
+    }*/
     
-    func signIn(signIn: GIDSignIn!, didDisconnectWithUser user:GIDGoogleUser!,
+    public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            print(error.localizedDescription)
+            return
+        }
+    }
+
+    
+    /*optional public func signIn(signIn: GIDSignIn!, didDisconnectWithUser user:GIDGoogleUser!,
                 withError error: NSError!) {
-        // Perform any operations when the user disconnects from app here.
-        // ...
-    }
-    
-    
+        if let error = error {
+            print(error.localizedDescription)
+            return
+        }
+    }*/
 }
 
