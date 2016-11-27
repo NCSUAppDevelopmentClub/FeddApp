@@ -14,9 +14,16 @@
 		9919971B1DC1786000D3EA8A /* FeddApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 991997191DC1786000D3EA8A /* FeddApp.xcdatamodeld */; };
 		9919971D1DC1786000D3EA8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9919971C1DC1786000D3EA8A /* Assets.xcassets */; };
 		991997201DC1786000D3EA8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9919971E1DC1786000D3EA8A /* LaunchScreen.storyboard */; };
+		995848C91DE247290076B545 /* SubmitTeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995848C81DE247290076B545 /* SubmitTeamCell.swift */; };
 		99917DBE1DCE9E250092C558 /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99917DBD1DCE9E250092C558 /* ScoreCell.swift */; };
 		99B0766E1DCA9F3400E7F323 /* LeaderboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B0766D1DCA9F3400E7F323 /* LeaderboardController.swift */; };
 		99B076701DCAA62C00E7F323 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99B0766F1DCAA62C00E7F323 /* GoogleService-Info.plist */; };
+		99E749421DDCEB8300DFBD07 /* TeamHomeButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E749411DDCEB8300DFBD07 /* TeamHomeButtonCell.swift */; };
+		99E749441DDD8A4A00DFBD07 /* EnterScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E749431DDD8A4A00DFBD07 /* EnterScoreCell.swift */; };
+		99E749461DDEB38100DFBD07 /* CreateTeamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E749451DDEB38100DFBD07 /* CreateTeamController.swift */; };
+		99E749481DDEBBA900DFBD07 /* SessionChooserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E749471DDEBBA900DFBD07 /* SessionChooserCell.swift */; };
+		99FF98321DD40A4B003CD8B2 /* TeamHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FF98311DD40A4B003CD8B2 /* TeamHomeController.swift */; };
+		99FF98341DD40B4E003CD8B2 /* ScoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FF98331DD40B4E003CD8B2 /* ScoreController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,9 +37,17 @@
 		9919971C1DC1786000D3EA8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9919971F1DC1786000D3EA8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		991997211DC1786000D3EA8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		995848C81DE247290076B545 /* SubmitTeamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitTeamCell.swift; sourceTree = "<group>"; };
 		99917DBD1DCE9E250092C558 /* ScoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
 		99B0766D1DCA9F3400E7F323 /* LeaderboardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardController.swift; sourceTree = "<group>"; };
 		99B0766F1DCAA62C00E7F323 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		99E749411DDCEB8300DFBD07 /* TeamHomeButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamHomeButtonCell.swift; sourceTree = "<group>"; };
+		99E749431DDD8A4A00DFBD07 /* EnterScoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterScoreCell.swift; sourceTree = "<group>"; };
+		99E749451DDEB38100DFBD07 /* CreateTeamController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTeamController.swift; sourceTree = "<group>"; };
+		99E749471DDEBBA900DFBD07 /* SessionChooserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionChooserCell.swift; sourceTree = "<group>"; };
+		99E7494A1DDEC4FE00DFBD07 /* FeddApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FeddApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		99FF98311DD40A4B003CD8B2 /* TeamHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamHomeController.swift; sourceTree = "<group>"; };
+		99FF98331DD40B4E003CD8B2 /* ScoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreController.swift; sourceTree = "<group>"; };
 		AD6CFC6A5C52FD21C28E0521 /* Pods-FeddApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeddApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeddApp/Pods-FeddApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,18 +84,50 @@
 		991997111DC1786000D3EA8A /* FeddApp */ = {
 			isa = PBXGroup;
 			children = (
-				991997121DC1786000D3EA8A /* AppDelegate.swift */,
-				991997141DC1786000D3EA8A /* ViewController.swift */,
-				99B0766D1DCA9F3400E7F323 /* LeaderboardController.swift */,
-				991997161DC1786000D3EA8A /* Main.storyboard */,
-				99917DBD1DCE9E250092C558 /* ScoreCell.swift */,
+				99FF98301DD3EC80003CD8B2 /* Controllers */,
+				99FF982F1DD3EC7C003CD8B2 /* Views */,
+				99FF982E1DD3EC74003CD8B2 /* Models */,
 				9919971C1DC1786000D3EA8A /* Assets.xcassets */,
 				9919971E1DC1786000D3EA8A /* LaunchScreen.storyboard */,
 				991997211DC1786000D3EA8A /* Info.plist */,
 				991997191DC1786000D3EA8A /* FeddApp.xcdatamodeld */,
 				99B0766F1DCAA62C00E7F323 /* GoogleService-Info.plist */,
+				99E7494A1DDEC4FE00DFBD07 /* FeddApp-Bridging-Header.h */,
 			);
 			path = FeddApp;
+			sourceTree = "<group>";
+		};
+		99FF982E1DD3EC74003CD8B2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				991997121DC1786000D3EA8A /* AppDelegate.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		99FF982F1DD3EC7C003CD8B2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				991997161DC1786000D3EA8A /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		99FF98301DD3EC80003CD8B2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				99917DBD1DCE9E250092C558 /* ScoreCell.swift */,
+				99B0766D1DCA9F3400E7F323 /* LeaderboardController.swift */,
+				991997141DC1786000D3EA8A /* ViewController.swift */,
+				99FF98311DD40A4B003CD8B2 /* TeamHomeController.swift */,
+				99FF98331DD40B4E003CD8B2 /* ScoreController.swift */,
+				99E749411DDCEB8300DFBD07 /* TeamHomeButtonCell.swift */,
+				995848C81DE247290076B545 /* SubmitTeamCell.swift */,
+				99E749431DDD8A4A00DFBD07 /* EnterScoreCell.swift */,
+				99E749451DDEB38100DFBD07 /* CreateTeamController.swift */,
+				99E749471DDEBBA900DFBD07 /* SessionChooserCell.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		A4C0DAC729DD7329FE87CF53 /* Pods */ = {
@@ -135,7 +182,7 @@
 				TargetAttributes = {
 					9919970E1DC1786000D3EA8A = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 3MS4CJ7FH7;
+						DevelopmentTeam = 47FWPX3KEU;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -225,11 +272,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99E749461DDEB38100DFBD07 /* CreateTeamController.swift in Sources */,
 				991997151DC1786000D3EA8A /* ViewController.swift in Sources */,
+				995848C91DE247290076B545 /* SubmitTeamCell.swift in Sources */,
 				9919971B1DC1786000D3EA8A /* FeddApp.xcdatamodeld in Sources */,
 				991997131DC1786000D3EA8A /* AppDelegate.swift in Sources */,
+				99E749481DDEBBA900DFBD07 /* SessionChooserCell.swift in Sources */,
+				99E749441DDD8A4A00DFBD07 /* EnterScoreCell.swift in Sources */,
+				99FF98341DD40B4E003CD8B2 /* ScoreController.swift in Sources */,
 				99917DBE1DCE9E250092C558 /* ScoreCell.swift in Sources */,
 				99B0766E1DCA9F3400E7F323 /* LeaderboardController.swift in Sources */,
+				99FF98321DD40A4B003CD8B2 /* TeamHomeController.swift in Sources */,
+				99E749421DDCEB8300DFBD07 /* TeamHomeButtonCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,10 +405,11 @@
 			baseConfigurationReference = AD6CFC6A5C52FD21C28E0521 /* Pods-FeddApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3MS4CJ7FH7;
+				DEVELOPMENT_TEAM = 47FWPX3KEU;
 				INFOPLIST_FILE = FeddApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.NCSUAppDev.FeddApp2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NCSUAppDev.FeddApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -365,10 +420,11 @@
 			baseConfigurationReference = 83BBB94DBA3A2A2A227F3B49 /* Pods-FeddApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3MS4CJ7FH7;
+				DEVELOPMENT_TEAM = 47FWPX3KEU;
 				INFOPLIST_FILE = FeddApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.NCSUAppDev.FeddApp2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NCSUAppDev.FeddApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

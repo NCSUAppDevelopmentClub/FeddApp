@@ -8,15 +8,28 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
+
+var projects = [String]()
+var morningTeams = [String:[String]]()
+var morningScores = [String:[Double]]()
+var afternoonTeams = [String:[String]]()
+var afternoonScores = [String:[Double]]()
+var teams = [String:[String]]()
+var scores = [String:[Double]]()
+var emails = [String]()
 
 class LeaderboardController: UITableViewController {
-
-    var projects = [String]()
-    var teams = [String:[String]]()
-    var scores = [String:[Int]]()
+    
+    var tempScore = [String:[Int]]()
+    @IBOutlet var sectionChooser: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1)
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationItem.backBarButtonItem?.title = " "
+        self.tableView.tableFooterView = UIView()
         getProjects()                                                           //Fills projects array with list of projects
     }
     
@@ -33,29 +46,54 @@ class LeaderboardController: UITableViewController {
             for project in tempProjects {
                 print("Project: \(project)")
             }
-            self.projects = tempProjects
+            projects = tempProjects
             self.tableView.reloadData()
             self.addTeamObservers()                                             //After projects found, adds observer to every team
         })
     }
     
     func addTeamObservers() {
-        let ref = FIRDatabase.database().reference().child("Scores")            //Reference to the scores node
+        var ref = FIRDatabase.database().reference().child("Morning Scores")            //Reference to the scores node
         for project in projects {                                               //Iterates through projects in scores node
             let tempRef = ref.child(project)
             
             //Adds listener ordered by ascending value on every project within the scores node
             tempRef.queryOrderedByValue().observe(.value, with: { snapshot in
                 var tempTeams = [String]()
-                var tempScores = [Int]()
+                var tempScores = [Double]()
                 for child in snapshot.children {                                //Iterates through teams in every project
                     let team = (child as! FIRDataSnapshot).key                  //Gets team name (key)
                     let score = (child as! FIRDataSnapshot).value               //Gets team score (value)
                     tempTeams.append(team)
-                    tempScores.append(score as! Int)
+                    tempScores.append(score as! Double)
                 }
-                self.teams[project] = tempTeams.reversed()                      //Stores teams and scores to associated project
-                self.scores[project] = tempScores.reversed()                    //Reverses order so that highest scores are first
+                morningTeams[project] = tempTeams.reversed()                      //Stores teams and scores to associated project
+                morningScores[project] = tempScores.reversed()                    //Reverses order so that highest scores are first
+                for i in 0..<tempTeams.count {
+                    print("Team: \(tempTeams[i]) with score: \(tempScores[i])")
+                }
+                teams = morningTeams
+                scores = morningScores
+                self.tableView.reloadData()                                     //Reloads table view
+            })
+        }
+        
+        ref = FIRDatabase.database().reference().child("Afternoon Scores")
+        for project in projects {                                               //Iterates through projects in scores node
+            let tempRef = ref.child(project)
+            
+            //Adds listener ordered by ascending value on every project within the scores node
+            tempRef.queryOrderedByValue().observe(.value, with: { snapshot in
+                var tempTeams = [String]()
+                var tempScores = [Double]()
+                for child in snapshot.children {                                //Iterates through teams in every project
+                    let team = (child as! FIRDataSnapshot).key                  //Gets team name (key)
+                    let score = (child as! FIRDataSnapshot).value               //Gets team score (value)
+                    tempTeams.append(team)
+                    tempScores.append(score as! Double)
+                }
+                afternoonTeams[project] = tempTeams.reversed()                      //Stores teams and scores to associated project
+                afternoonScores[project] = tempScores.reversed()                    //Reverses order so that highest scores are first
                 for i in 0..<tempTeams.count {
                     print("Team: \(tempTeams[i]) with score: \(tempScores[i])")
                 }
@@ -66,14 +104,10 @@ class LeaderboardController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        print("Team Count: \(teams.count)")
+        //print("Team Count: \(teams.count)")
         return teams.count
     }
 
@@ -93,6 +127,9 @@ class LeaderboardController: UITableViewController {
         let score = scoreArray[indexPath.row]
         cell.teamName.text = teamName
         cell.score.text = "\(score)"
+        if score < 0 {
+            cell.score.text = "-"
+        }
 
         return cell
     }
@@ -100,50 +137,76 @@ class LeaderboardController: UITableViewController {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return projects[section]
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if FIRAuth.auth()?.currentUser?.email != nil {
+            var email = ""
+            email = (FIRAuth.auth()?.currentUser?.email!)!
+            if emails.contains(email) {
+                let cell = tableView.cellForRow(at: indexPath) as! ScoreCell
+                let sectionHeaderView = tableView.headerView(forSection: indexPath.section)
+                let sectionTitle = sectionHeaderView?.textLabel?.text
+                if let project = sectionTitle {
+                    if let teamName = cell.teamName.text {
+                        print(teamName)
+                        print(project)
+                        performSegue(withIdentifier: "showTeamPage", sender: [project, teamName])
+                    }
+                }
+            }
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showTeamPage" {
+            if segue.destination is TeamHomeController {
+                if sectionChooser.selectedSegmentIndex == 0 {
+                    (segue.destination as! TeamHomeController).setSession(morningSession: true)
+                }
+                else {
+                    (segue.destination as! TeamHomeController).setSession(morningSession: false)
+                }
+                
+                let project = (sender as? [String])?[0]
+                let teamName = (sender as? [String])?[1]
+                segue.destination.navigationItem.title = (sender as? [String])?[1]
+                (segue.destination as! TeamHomeController).loadPlayersAndScores(project: project!, team: teamName!)
+            }
+        }
     }
-    */
-
+    
+    @IBAction func sectionClicked(_ sender: AnyObject) {
+        if sectionChooser.selectedSegmentIndex == 0 {
+            teams = morningTeams
+            scores = morningScores
+        }
+        else {
+            teams = afternoonTeams
+            scores = afternoonScores
+        }
+        tableView.reloadData()
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "createTeam" {
+            if FIRAuth.auth()?.currentUser?.email != nil {
+                var email = ""
+                email = (FIRAuth.auth()?.currentUser?.email!)!
+                if emails.contains(email) {
+                    return true
+                }
+                else {
+                    return false
+                }
+            }
+            else {
+                return false
+            }
+        }
+        return true
+    }
+    
+    @IBAction func unwind(segue: UIStoryboardSegue) {
+        //This needs to be here in order for the unwind in TeamHomeController to function
+    }
 }
